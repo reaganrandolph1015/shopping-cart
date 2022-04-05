@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ items }) => {
   return (
     <div className="header-container">
-      <h1 className="shop-name">TITLE</h1>
+      <h1 className="shop-name">SHOES</h1>
       <div className="nav-container">
         <Link to="/" onClick={(e) => e.blur()}>
           HOME
@@ -17,7 +17,14 @@ const Header = ({ items }) => {
         </Link>
       </div>
       <div className="counter">
-        <h1>🛒 {items}</h1>
+        <h1>
+          <button type="button" className="header-button">
+            <Link to="/checkout" onClick={(e) => e.blur()}>
+              🛒
+            </Link>
+          </button>{' '}
+          {items}
+        </h1>
       </div>
     </div>
   );

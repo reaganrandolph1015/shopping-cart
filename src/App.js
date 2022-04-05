@@ -4,6 +4,7 @@ import Shop from './components/Shop';
 import About from './components/About';
 import Header from './components/Header';
 import Home from './components/Home';
+import Checkout from './components/Checkout';
 
 const App = () => {
   const [items, setItems] = useState(0);
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Shop />} />
         <Route path="/about" element={<About />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );
