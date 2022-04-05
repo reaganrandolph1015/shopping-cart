@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Nav from './components/Nav';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Cart from './components/Cart';
+import About from './components/About';
+import Header from './components/Header';
+import Home from './components/Home';
 
 const App = () => {
   return (
-    <div>
-      <h1 className="route-title">Home</h1>
-      <div className="nav">
-        <Nav />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
