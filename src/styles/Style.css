@@ -40,6 +40,10 @@ ul {
   text-decoration: underline;
 }
 
+.card-container {
+  display: flex;
+}
+
 .card-name {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -53,8 +57,9 @@ ul {
 
 .card-image {
   width: 250px;
-  height: auto;
+  height: 155px;
   max-width: 100%;
+  max-height: auto;
 }
 
 .counter {

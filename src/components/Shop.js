@@ -5,7 +5,7 @@ const Shop = () => {
   return (
     <div>
       <h1 className="route-title">STORE</h1>
-      <div className="content-container">
+      <div className="card-container">
         <Cards />
       </div>
     </div>
