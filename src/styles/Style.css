@@ -4,18 +4,57 @@ a {
   margin: 12.5px;
   font-size: 24px;
   text-decoration: none;
+  color: white;
 }
 
 a:active {
   color: rgb(0, 0, 197);
 }
 
-a:visited {
+a:focus {
+  outline: none;
+  box-shadow: none;
   color: rgb(0, 0, 197);
 }
 
 ul {
   list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: auto;
+  max-width: 100%;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.card:active {
+  color: rgb(0, 0, 197);
+}
+
+.card:hover {
+  text-decoration: underline;
+}
+
+.card-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-price {
+  margin-top: 0;
+}
+
+.card-image {
+  width: 250px;
+  height: auto;
+  max-width: 100%;
 }
 
 .counter {
@@ -44,6 +83,7 @@ ul {
 }
 
 .route-title {
+  font-size: 44px;
   text-align: center;
 }
 
