@@ -1,9 +1,10 @@
 import React from 'react';
+import Popups from './Popup';
 
 const Checkout = () => {
   return (
     <div>
-      <h1>CHECKOUT</h1>
+      <Popups />
     </div>
   );
 };

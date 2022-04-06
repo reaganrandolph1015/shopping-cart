@@ -6,16 +6,25 @@ import AM from '../imgs/Airmax.webp';
 import AF from '../imgs/Airforce.png';
 import NB from '../imgs/Newbalance.png';
 import UB from '../imgs/Ultraboost.png';
+import Popup from 'reactjs-popup';
 
 const Cards = () => {
   let cardArray = [];
 
   const createCard = (src, text, price, key) => (
-    <div className="card" key={key}>
-      <img className="card-image" src={src} alt="card-img" />
-      <h3 className="card-name">{text}</h3>
-      <p className="card-price">{`$${price}`}</p>
-    </div>
+    <Popup
+      trigger={
+        <button>
+          <div className="card" key={key}>
+            <img className="card-image" src={src} alt="card-img" />
+            <h3 className="card-name">{text}</h3>
+            <p className="card-price">{`$${price}`}</p>
+          </div>
+        </button>
+      }
+    >
+      <div>Popup Content</div>
+    </Popup>
   );
 
   // Variables for shoe cards
