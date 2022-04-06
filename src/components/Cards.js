@@ -8,23 +8,40 @@ import NB from '../imgs/Newbalance.png';
 import UB from '../imgs/Ultraboost.png';
 import Popup from 'reactjs-popup';
 
-const Cards = () => {
+const Cards = ({ addItem, subtractItem }) => {
   let cardArray = [];
 
   const createCard = (src, text, price, key) => (
     <Popup
       trigger={
-        <button>
-          <div className="card" key={key}>
+        <button className="popup-card">
+          <div className="card">
             <img className="card-image" src={src} alt="card-img" />
             <h3 className="card-name">{text}</h3>
             <p className="card-price">{`$${price}`}</p>
           </div>
         </button>
       }
+      key={key}
     >
-      <div>Popup Content</div>
+      {popupContainer}
     </Popup>
+  );
+
+  const popupContainer = () => (
+    <div className="popup-container">
+      <button
+        type="button"
+        className="popup-input-buttons"
+        onClick={subtractItem}
+      >
+        -
+      </button>
+      <input type="text" className="popup-input"></input>
+      <button type="button" className="popup-input-buttons" onClick={addItem}>
+        +
+      </button>
+    </div>
   );
 
   // Variables for shoe cards
