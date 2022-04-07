@@ -10,7 +10,7 @@ const App = () => {
   const [items, setItems] = useState(0);
 
   // Manipulate items state
-  const addItem = () => {
+  const addItem = (e) => {
     setItems(items + 1);
   };
   const subtractItem = () => setItems(items - 1);
